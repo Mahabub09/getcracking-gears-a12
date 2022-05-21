@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Hanging 4K Camera",
+        "min_order": "30",
+        "available_quantity": "95",
+        "price": "35",
+        "img": "https://htmldemo.net/lukas/lukas/assets/img/product/product-details-4.png",
+        "short_description": "The best is yet to come! Visual 4K "
+    },
+    {
+        "id": 2,
+        "name": "Cordless Blower",
+        "min_order": "20",
+        "available_quantity": "120",
+        "price": "129.00",
+        "img": "https://www.acmetools.com/on/demandware.static/-/Sites-acme-catalog-m-en/default/dwadab21f3/images/images/catalog/product/7/7cc1c9e1-c33e-4f6b-afc0-eeafe745f2ed_7.jpeg",
+        "short_description": "At Acme Tools we pride ourselves on offering you the best selection of tools,"
+    },
+    {
+        "id": 3,
+        "name": "Hedge Trimmer",
+        "min_order": "20",
+        "available_quantity": "120",
+        "price": "129.00",
+        "img": "https://www.acmetools.com/on/demandware.static/-/Sites-acme-catalog-m-en/default/dw8c04f448/images/images/catalog/product/2/22D44FEF-0A79-4551-B9FA-260028999E7D_7.jpg",
+        "short_description": "From time to time we are not always able to see what the competition is doing. Our product is priced as low as possible"
+    },
+    {
+        "id": 4,
+        "name": "Hedge Trimmer Rack",
+        "min_order": "30",
+        "available_quantity": "90",
+        "price": "103.65",
+        "img": "https://www.acmetools.com/on/demandware.static/-/Sites-acme-catalog-m-en/en_US/v1653153413304/images/images/catalog/product/h/HA041_1.jpg?dl=1",
+        "short_description": " Our product is priced as low as possible. However, our prices won't be beat"
+    },
+    {
+        "id": 5,
+        "name": "Cordless grass Shear",
+        "min_order": "35",
+        "available_quantity": "100",
+        "price": "99.00",
+        "img": "https://www.acmetools.com/on/demandware.static/-/Sites-acme-catalog-m-en/default/dwa7cbbd6b/images/images/catalog/product/f/F686155D-45F7-4D83-86A9-1EFE66D02839_7.jpg",
+        "short_description": "If you see the exact item currently advertised for less we should be able to match that price"
+    },
+    {
+        "id": 6,
+        "name": "String Trimmer Kit",
+        "min_order": "15",
+        "available_quantity": "80",
+        "price": "199.00",
+        "img": "https://www.acmetools.com/on/demandware.static/-/Sites-acme-catalog-m-en/default/dwcd7c7207/images/images/catalog/product/8/8bd389cc-aa17-4481-a267-3cd61a615c72_7.jpeg",
+        "short_description": "The best is yet to come! Visual 4K "
+    }
+]
