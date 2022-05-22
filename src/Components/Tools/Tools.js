@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Tool from '../Tool/Tool';
+import Bounce from 'react-reveal/Bounce';
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from 'react-slick/lib/slider';
@@ -55,15 +56,17 @@ const Tools = () => {
         <div className='container'>
 
 
-            <div className='grid lg:grid-cols-3 md:grid-cols-1 gap-4'>
-                {
-                    tools.map(tool => <Tool
-                        key={tool.id}
-                        tool={tool}
-                    >
-                    </Tool>)
-                }
-            </div>
+            <Bounce top>
+                <div className='grid lg:grid-cols-3 md:grid-cols-1 gap-4'>
+                    {
+                        tools.map(tool => <Tool
+                            key={tool.id}
+                            tool={tool}
+                        >
+                        </Tool>)
+                    }
+                </div>
+            </Bounce>
             {/* <div>
 
                     <Slider {...settings}>
