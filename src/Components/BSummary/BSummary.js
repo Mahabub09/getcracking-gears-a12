@@ -13,6 +13,7 @@ const BSummary = () => {
             background: `url(${bgd})`,
             backgroundSize: 'cover'
         }} >
+            <h1 className='text-center text-neutral text-4xl mb-4  underline underline-offset-8'>Millions Of Supplier Trust Us</h1>
             <div className=' flex justify-between'>
                 <div className='text-center'>
                     <ImFlag className='text-6xl mx-auto text-accent-focus my-2  '></ImFlag>

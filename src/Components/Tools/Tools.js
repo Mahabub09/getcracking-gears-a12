@@ -59,7 +59,7 @@ const Tools = () => {
             <Bounce top>
                 <div className='grid lg:grid-cols-3 md:grid-cols-1 gap-4'>
                     {
-                        tools.map(tool => <Tool
+                        tools.slice(0, 6).map(tool => <Tool
                             key={tool.id}
                             tool={tool}
                         >
