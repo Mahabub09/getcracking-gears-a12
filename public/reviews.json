@@ -3,6 +3,7 @@
         "id": 1,
         "name": "Greg Swartsfager",
         "rating": "3.5",
+        "location": "California",
         "img": "https://media.istockphoto.com/photos/studio-shot-of-a-handsome-and-happy-young-man-posing-against-a-grey-picture-id1355110818?b=1&k=20&m=1355110818&s=170667a&w=0&h=O58XhltYuAw0ssiUWXAFlIitq_4kj-WdJFWcTLEoUi0=",
         "review": "I ordered a Honda FRC800 rototiller last Tuesday 5-10 and recieved it this morning on Wednesday 5-18. I'm happy with the delivery time and can't wait to try it out."
     },
@@ -10,6 +11,7 @@
         "id": 2,
         "name": "Jeff",
         "rating": "5",
+        "location": "California",
         "img": "https://media.istockphoto.com/photos/studio-portrait-of-a-smiling-young-latin-woman-picture-id1357723739?b=1&k=20&m=1357723739&s=170667a&w=0&h=TocMmpiVPhpoCekB2a4MQNi87Sc6yqR0s8b7MK9vXNA=",
         "review": "I was a little leery of doing business with Acme Tools because of the ratings on this site, however I purchased a Makita Hedge trimmer at the best price anywhere. Trimmer arrived quickly and without damage. Acme provided daily tracking updates. I couldn't be more pleased with this company. "
     },
@@ -17,6 +19,7 @@
         "id": 3,
         "name": "Reginald Brown",
         "rating": "5",
+        "location": "California",
         "img": "https://media.istockphoto.com/photos/studio-shot-of-a-young-businessman-using-a-cellphone-against-a-white-picture-id1354173388?k=20&m=1354173388&s=612x612&w=0&h=fiPMDrKesbeXeKprJZy-I9DSpYhkEsIg9gA0zngbklg=",
         "review": "I've read some bad things on here about customer service at Acme and have to provide my own experiences that have been stellar. Only twice have I had to contact them. Once to ask that they split an order and send the in stock items right away. I'd selected the wrong options at checkout, they fixed MY mistake immediately. "
     },
@@ -24,6 +27,7 @@
         "id": 4,
         "name": " Brown Reginald",
         "rating": "5",
+        "location": "California",
         "img": "https://media.istockphoto.com/photos/shot-of-a-handsome-man-standing-alone-against-a-grey-background-in-picture-id1355110814?k=20&m=1355110814&s=612x612&w=0&h=t9TA8c946aRWwbIzA7HvNIjUbesaPIuWaVl5FNTYghg=",
         "review": "I have just started using Performance PC's, and have already had to engage customer service a few times, and they have been really great. They helped me out when I made an error in my first order, and were really good about returns and exchanges. They also ship things really fast, and customer service is great to deal with. I stumbled across them to get supplies for a customer water loop, and I'll definitely continue to do business with them "
     }
