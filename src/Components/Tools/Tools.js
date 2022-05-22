@@ -1,23 +1,76 @@
 import React, { useEffect, useState } from 'react';
 import Tool from '../Tool/Tool';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import Slider from 'react-slick/lib/slider';
+
+
 
 const Tools = () => {
     const [tools, setTools] = useState([]);
     useEffect(() => {
         fetch('tools.json')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setTools(data))
     }, [])
+
+    //*******  slick  *********//
+    // var settings = {
+    //     dots: true,
+    //     infinite: false,
+    //     speed: 500,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3,
+    //     initialSlide: 0,
+    //     responsive: [
+    //         {
+    //             breakpoint: 980,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 3,
+    //                 infinite: true,
+    //                 dots: true
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 2,
+    //                 initialSlide: 2
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1
+    //             }
+    //         }
+    //     ]
+    // };
+
+
     return (
-        <div>
-            <h1>our tools</h1>
-            {
-                tools.map(tool => <Tool
-                    key={tool.id}
-                    tool={tool}
-                >
-                </Tool>)
-            }
+        <div className='container'>
+
+
+            <div className='grid lg:grid-cols-3 md:grid-cols-1 gap-4'>
+                {
+                    tools.map(tool => <Tool
+                        key={tool.id}
+                        tool={tool}
+                    >
+                    </Tool>)
+                }
+            </div>
+            {/* <div>
+
+                    <Slider {...settings}>
+                        <div >
+                        </div>     </Slider>
+                </div> */}
+
         </div>
     );
 };
