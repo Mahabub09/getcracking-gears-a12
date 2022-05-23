@@ -61,8 +61,8 @@ const Login = () => {
     }
     return (
         <div className='container w-50 mx-auto shadow-lg p-3 my-5 bg-body rounded responsive '>
-            <div className='d-flex justify-content-between'><button className='mx-auto border-end w-50 text-success'>LOGIN</button>
-                <button className='mx-auto border-start w-50 text-success' onClick={navigateRegister}>REGISTER</button></div>
+            <div className='d-flex justify-content-between'><button className='mx-auto border-end w-50 text-success  transition ease-in-out delay-300 hover:-translate-y-1 hover:underline hover:underline-offset-4'>LOGIN</button>
+                <button className='mx-auto border-start w-50 text-success  transition ease-in-out delay-300 hover:-translate-y-1 hover:underline hover:underline-offset-4' onClick={navigateRegister}>REGISTER</button></div>
             <SocialLogin></SocialLogin>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -78,7 +78,7 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <button className='btn-success py-2 px-5 rounded d-flex align-items-center '>
+                <button className='bg-primary py-2 px-5 rounded flex items-center mx-auto text-white'>
                     LOGIN   <BiLogInCircle></BiLogInCircle>
 
                 </button>

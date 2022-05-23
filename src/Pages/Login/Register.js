@@ -41,8 +41,8 @@ const Register = () => {
     }
     return (
         <div className='register-form mt-3 container w-50 mx-auto shadow-lg p-3 my-5 bg-body rounded '>
-            <div className='d-flex justify-content-between'><button className='mx-auto border-end w-50 text-success' onClick={navigateLogin}>LOGIN</button>
-                <button className='mx-auto border-start w-50 text-success'>REGISTER</button></div>
+            <div className='d-flex justify-content-between'><button className='mx-auto border-end w-50 text-success  transition ease-in-out delay-300 hover:-translate-y-1 hover:underline hover:underline-offset-4 ' onClick={navigateLogin}>LOGIN</button>
+                <button className='mx-auto border-start w-50 hover:text-success  transition ease-in-out delay-300 hover:-translate-y-1  hover:underline hover:underline-offset-4'>REGISTER</button></div>
             <SocialLogin></SocialLogin>
             <form className='d-flex flex-column justify-content-center space-y-2' onSubmit={handleRegister}>
                 <input className='py-2 px-3 bg-gray-300 rounded-pill' type="text" name="name" id="" placeholder='Your Name' />
@@ -53,7 +53,7 @@ const Register = () => {
                 <div><input onClick={() => setAgree(!agree)}
                     type="checkbox" name="terms" id="terms" />
                     <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Get Cracking Gears Terms</label></div>
-                <button disabled={!agree} className="btn-success w-50 mx-auto py-2 my-2 rounded">REGISTER
+                <button disabled={!agree} className="btn-success text-white w-50 mx-auto py-2 my-2 rounded">REGISTER
 
                 </button>
             </form>
