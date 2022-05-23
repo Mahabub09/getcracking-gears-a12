@@ -1,11 +1,26 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { Nav } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import logo from '../../Images/logo.png'
 
 const Navbar = () => {
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     const navBarItems = <>
         <li><Link to="/home">HOME</Link></li>
         <li><Link to="/blogs">BLOGS</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li>{user ? <button className="btn mt-1 btn-ghost" onClick={handleSignOut} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <img className=' w-[45px] rounded-full' src={user?.photoURL} alt="" />
+        <Nav.Link className='p-3' >
+
+            {user?.displayName}
+        </Nav.Link>
 
     </>
     return (
@@ -21,7 +36,7 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <Link to="/home" className="hover:text-white text-xl">SINEWY TOOLS</Link>
+                    <Link to="/home" className="hover:text-white  ml-10 text-xl"><img className='w-[70px] ' src={logo} alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">

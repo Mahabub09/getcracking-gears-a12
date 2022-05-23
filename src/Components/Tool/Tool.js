@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Tool = ({ tool }) => {
 
+    const navigate = useNavigate();
+
+    const navigateToPurchase = id => {
+        navigate(`/tool/${id}`);
+    }
 
     return (
         <div>
@@ -18,7 +24,7 @@ const Tool = ({ tool }) => {
                     <p> Per Unit:<b> {tool.price}$</b></p>
                     <p className='py-3'>{tool.short_description}</p>
                     <div >
-                        <button class="btn btn-primary text-white ml-20 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300  ">Purchase</button>
+                        <button className="btn btn-primary text-white ml-20 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300  " onClick={() => navigateToPurchase(tool._id)}>Purchase</button>
                     </div>
 
 
