@@ -10,6 +10,7 @@ const Reviews = () => {
     }, [])
     return (
         <div>
+            <h1 className='text-neutral text-center underline underline-offset-8 text-3xl my-5'>Our Clients Say </h1>
 
             <div className=' container grid lg:grid-cols-3 md:grid-cols-1 gap-4'>
                 {

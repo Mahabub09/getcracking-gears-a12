@@ -17,11 +17,11 @@ const Footer = () => {
                     <Link to='/' class="link link-hover">Press kit</Link>
                 </div>
                 <div>
-                    <div class="grid grid-flow-col gap-4 text-2xl">
-                        <Bounce top><BsFacebook></BsFacebook></Bounce>
-                        <Bounce bottom><BsTwitter></BsTwitter></Bounce>
-                        <Bounce left><AiFillLinkedin></AiFillLinkedin></Bounce>
-                        <Bounce right><BsGithub></BsGithub></Bounce>
+                    <div class="grid grid-flow-col gap-4 text-2xl  ">
+                        <Bounce top><BsFacebook className=' hover:text-blue-500 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'></BsFacebook></Bounce>
+                        <Bounce bottom><BsTwitter className='hover:text-blue-500 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'></BsTwitter></Bounce>
+                        <Bounce left><AiFillLinkedin className='hover:text-blue-500 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'></AiFillLinkedin></Bounce>
+                        <Bounce right><BsGithub className='hover:text-neutral transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'></BsGithub></Bounce>
                     </div>
                 </div>
                 <div>
