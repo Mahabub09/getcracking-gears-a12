@@ -44,12 +44,12 @@ const Register = () => {
             <div className='d-flex justify-content-between'><button className='mx-auto border-end w-50 text-success' onClick={navigateLogin}>LOGIN</button>
                 <button className='mx-auto border-start w-50 text-success'>REGISTER</button></div>
             <SocialLogin></SocialLogin>
-            <form className='d-flex flex-column justify-content-center' onSubmit={handleRegister}>
-                <input className='py-3' type="text" name="name" id="" placeholder='Your Name' />
+            <form className='d-flex flex-column justify-content-center space-y-2' onSubmit={handleRegister}>
+                <input className='py-2 px-3 bg-gray-300 rounded-pill' type="text" name="name" id="" placeholder='Your Name' />
 
-                <input className='py-3' type="email" name="email" id="" placeholder='Email Address' required />
+                <input className='py-2 px-3 bg-gray-300 rounded-pill' type="email" name="email" id="" placeholder='Email Address' required />
 
-                <input className='py-3' type="password" name="password" id="" placeholder='Password' required />
+                <input className='py-2 px-3 bg-gray-300 rounded-pill' type="password" name="password" id="" placeholder='Password' required />
                 <div><input onClick={() => setAgree(!agree)}
                     type="checkbox" name="terms" id="terms" />
                     <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Get Cracking Gears Terms</label></div>
