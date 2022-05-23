@@ -1,6 +1,5 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Nav } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -13,21 +12,22 @@ const Navbar = () => {
         signOut(auth);
     }
     const navBarItems = <>
-        <li><Link to="/home">HOME</Link></li>
+        <li className='p-[-16px]'><Link to="/home">HOME</Link></li>
         <li><Link to="/blogs">BLOGS</Link></li>
         <li><Link to="/addReview">ADD REVIEW</Link></li>
+        <li><Link to="/addTools">ADD TOOLS</Link></li>
         <li>{user ? <button className="btn mt-1 btn-ghost" onClick={handleSignOut} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         <img className=' w-[45px] rounded-full mx-auto' src={user?.photoURL} alt="" />
-        <Nav.Link className='p-3 ' >
+        <li className='p-3 ' >
 
             {user?.displayName}
-        </Nav.Link>
+        </li>
 
     </>
     return (
         <div>
             <div className="navbar bg-neutral text-white">
-                <div className="navbar-start">
+                <div className="navbar-start w-[75px]">
                     <div className="dropdown">
                         <label tabindex="0" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -37,10 +37,10 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <Link to="/home" className="hover:text-white  ml-10 text-xl"><img className='w-[70px] ' src={logo} alt="" /></Link>
+                    <Link to="/home" className="hover:text-white   "><img className='w-[70px] ' src={logo} alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal p-0">
+                    <ul className="menu menu-horizontal ">
                         {navBarItems}
 
                     </ul>
