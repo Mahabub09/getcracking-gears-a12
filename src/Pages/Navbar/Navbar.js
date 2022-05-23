@@ -15,9 +15,10 @@ const Navbar = () => {
     const navBarItems = <>
         <li><Link to="/home">HOME</Link></li>
         <li><Link to="/blogs">BLOGS</Link></li>
+        <li><Link to="/addReview">ADD REVIEW</Link></li>
         <li>{user ? <button className="btn mt-1 btn-ghost" onClick={handleSignOut} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
-        <img className=' w-[45px] rounded-full' src={user?.photoURL} alt="" />
-        <Nav.Link className='p-3' >
+        <img className=' w-[45px] rounded-full mx-auto' src={user?.photoURL} alt="" />
+        <Nav.Link className='p-3 ' >
 
             {user?.displayName}
         </Nav.Link>
