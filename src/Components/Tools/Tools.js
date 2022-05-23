@@ -68,8 +68,7 @@ const Tools = () => {
                 </div>
             </Bounce>
             {/* <div>
-
-                    <Slider {...settings}>
+ <Slider {...settings}>
                         <div >
                         </div>     </Slider>
                 </div> */}

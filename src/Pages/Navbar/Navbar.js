@@ -14,8 +14,12 @@ const Navbar = () => {
     const navBarItems = <>
         <li className='p-[-16px]'><Link to="/home">HOME</Link></li>
         <li><Link to="/blogs">BLOGS</Link></li>
-        <li><Link to="/addReview">ADD REVIEW</Link></li>
-        <li><Link to="/addTools">ADD TOOLS</Link></li>
+        {
+            user && <>
+                <li><Link to="/addReview">ADD REVIEW</Link></li>
+                <li><Link to="/addTools">ADD TOOLS</Link></li>
+                <li><Link to="/allTools">ALL TOOLS</Link></li></>
+        }
         <li>{user ? <button className="btn mt-1 btn-ghost" onClick={handleSignOut} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         <img className=' w-[45px] rounded-full mx-auto' src={user?.photoURL} alt="" />
         <li className='p-3 ' >
