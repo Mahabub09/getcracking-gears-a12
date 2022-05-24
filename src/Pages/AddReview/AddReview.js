@@ -32,7 +32,7 @@ const AddReview = () => {
                 <input className='border border-dark p-2 rounded' placeholder='LOCATION' {...register("location",)} />
                 <input placeholder='Image URL' className='border border-dark py-2 rounded' value={user?.photoURL} {...register("img")} readOnly />
 
-                <input className='border border-dark p-2 rounded' placeholder='RATING' type="number" {...register("rating", { min: 1, max: 5 })} />
+                <input className='border border-dark p-2 rounded' placeholder='RATING' type="number"  {...register("rating", { min: 1, max: 5 })} />
                 <textarea className='border border-dark p-2 rounded' placeholder='REVIEW' {...register("review",)} />
                 <input className='btn btn-primary w-25 mx-auto' type="submit" value="Add Review" />
             </form>
