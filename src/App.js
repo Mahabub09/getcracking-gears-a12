@@ -12,6 +12,7 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 import Navbar from './Pages/Navbar/Navbar';
+import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 
       <Footer></Footer>
