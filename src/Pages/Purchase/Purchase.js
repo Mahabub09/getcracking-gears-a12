@@ -8,6 +8,8 @@ const Purchase = () => {
     const [tool, setTool] = useState({});
     const { img, min_order, name, available_quantity, short_description, price } = tool
 
+    let quantity = parseInt(available_quantity)
+    let order = parseInt(min_order)
     useEffect(() => {
         const url = `http://localhost:5000/tool/${toolId}`;
         console.log(url);
@@ -28,20 +30,13 @@ const Purchase = () => {
                     <p>Minimum Order: <b><i>{min_order} Items</i></b></p>
                     <p>Available Items: <b>{available_quantity}</b></p>
                     <p> <b>About:  </b><small><i>{short_description}</i></small></p>
-                    <button className="btn my-3 ml-5 text-white" >Confirm Order</button>
-                    {/* {
-                        available_quantity > min_order
-                            ? <button className="btn my-3 ml-5 text-white" >Confirm Order</button>
-                            : <button className="btn my-3 ml-5 text-white" disabled >Confirm Order</button>
+                    <button className="btn my-3 ml-5 text-white" disabled={quantity < order} >Confirm Order</button>
 
-
-
-                    } */}
-                    {/* <p className='w-50'>{
-                        available_quantity < min_order
-                            ? <img src={available} alt="" ></img>
-                            : <div ><img src={soldOut} alt="" ></img><p className='text-2xl text-red-500'>Wait For Restock</p></div>
-                    }</p> */}
+                    <p className='w-50'>{
+                        quantity < order
+                            ? <div ><img src={soldOut} alt="" ></img><p className='text-2xl text-red-500'>Wait For Restock</p></div>
+                            : <img src={available} alt="" ></img>
+                    }</p>
                 </div>
             </div >
 
