@@ -8,8 +8,8 @@ const Review = ({ review }) => {
             <div>
 
                 <div className=' container  shadow-lg p-3 mb-5  hover:bg-gray-300 rounded-md mx-auto  transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'>
-                    <div class="avatar">
-                        <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 mx-auto">
+                    <div className="avatar">
+                        <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 mx-auto">
                             <img src={review?.img} alt="" />
                         </div>
                     </div>

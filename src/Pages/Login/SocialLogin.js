@@ -34,7 +34,7 @@ const SocialLogin = () => {
             <div>
                 <button
                     onClick={() => signInWithGoogle()}
-                    className='rounded-pill bg-blue-500 text-white w-50 py-3 justify-center mx-auto my-2 flex items-center'>
+                    className='lg:rounded-pill bg-blue-500 text-white w-50 py-3 justify-center mx-auto my-2 flex items-center'>
                     <FcGoogle className='text-2xl' ></FcGoogle>
 
                     <span >Google Sign In</span>
@@ -42,7 +42,7 @@ const SocialLogin = () => {
 
                 <button
                     onClick={() => signInWithGithub()}
-                    className='rounded-pill bg-black text-white w-50 py-3 justify-center mx-auto my-2 flex items-center'>
+                    className='lg:rounded-pill bg-black text-white w-50 py-3 justify-center mx-auto my-2 flex items-center'>
                     <SiGithub></SiGithub>
                     <span className='px-2'>Github Sign In</span>
                 </button>

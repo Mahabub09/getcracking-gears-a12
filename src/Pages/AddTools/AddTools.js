@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 const AddTools = () => {
     const { register, handleSubmit } = useForm();
@@ -15,7 +16,10 @@ const AddTools = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                if (result.insertedId) {
+                    toast("YOUR Tool IS ADDED");
+
+                }
             })
     };
 

@@ -6,7 +6,7 @@ const Features = () => {
     return (
         <div className='container my-5'>
             <hr />
-            <div className='flex justify-around items-center my-3 ' >
+            <div className='lg:flex justify-around items-center my-3 ' >
                 <Fade left>
                     <div className=' flex space-x-8 items-center'>
                         <img className='w-12' src={'https://htmldemo.net/lukas/lukas/assets/img/icons/icon-1.png'} alt="" />

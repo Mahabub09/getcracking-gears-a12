@@ -1,5 +1,6 @@
 
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import RequireAuth from './Components/RequireAuth/RequiureAuth';
 import AddReview from './Pages/AddReview/AddReview';
@@ -30,6 +31,7 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
 
     </div>
   );
