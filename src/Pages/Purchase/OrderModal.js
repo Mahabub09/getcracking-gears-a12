@@ -5,7 +5,7 @@ import auth from '../../firebase.init';
 
 const OrderModal = ({ order, setOrder }) => {
     const [user, loading, error] = useAuthState(auth);
-    const { _id, name, available_quantity } = order;
+    const { _id, name, min_order } = order;
 
     let intQuantity = parseInt(order.available_quantity)
     let minOrder = parseInt(order.min_order)
@@ -56,7 +56,7 @@ const OrderModal = ({ order, setOrder }) => {
                         <input type="text" name="userName" disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
 
-                        <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered w-full max-w-xs" />
+                        <input type="number" name="quantity" placeholder="Quantity" defaultValue={min_order} className="input input-bordered w-full max-w-xs" />
                         <input type="number" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                         <textarea type="text" name="address" placeholder="Address" className="input input-bordered w-full max-w-xs" />
                         <input type="submit" value="Confirm" className="btn btn-secondary w-full max-w-xs" />

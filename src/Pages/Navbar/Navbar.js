@@ -14,6 +14,7 @@ const Navbar = () => {
     const navBarItems = <>
         <li className='p-[-16px]'><Link to="/home">HOME</Link></li>
         <li><Link to="/blogs">BLOGS</Link></li>
+        <li><Link to="/myPortfolio">MY PORTFOLIO</Link></li>
         {
             user && <>
                 <li><Link to="/addReview">ADD REVIEW</Link></li>

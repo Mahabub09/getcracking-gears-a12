@@ -11,6 +11,7 @@ import Footer from './Pages/Footer/Footer';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Navbar from './Pages/Navbar/Navbar';
 import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
@@ -27,6 +28,7 @@ function App() {
         <Route path='/addTools' element={<RequireAuth><AddTools></AddTools></RequireAuth>}></Route>
         <Route path='/allTools' element={<RequireAuth><AllTools></AllTools></RequireAuth>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
