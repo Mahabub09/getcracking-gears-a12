@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import available from '../../Images/available.png'
+import soldOut from '../../Images/soldOut.png'
 
 const Purchase = () => {
     const { toolId } = useParams();
     const [tool, setTool] = useState({});
+    const { img, min_order, name, available_quantity, short_description, price } = tool
 
     useEffect(() => {
         const url = `http://localhost:5000/tool/${toolId}`;
@@ -18,18 +21,31 @@ const Purchase = () => {
             <h1 className='text-4xl text-center text-neutral mt-3'>Confirm Your Order</h1>
 
             <div className="container w-75 my-10 py-5 flex justify-center items-center space-x-10 rounded-lg shadow-lg">
-                <div className='w-25'> <img className="img-fluid transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125" src={tool.img} alt="" /></div>
-                <div className='bg-gray-200 p-10'>
-                    <h1 className='text-2xl'>{tool.name}</h1>
-                    <p>Price: <b><i>{tool.price}</i></b></p>
-                    <p>Minimum Order: <b><i>{tool.min_order} Items</i></b></p>
-                    <p>Available Items: <b>{tool.available_quantity}</b></p>
-                    <p> <b>About:  </b><small><i>{tool.short_description}</i></small></p>
-                    <button className="btn mt-3 ml-5 text-white">Confirm Order</button>
-                </div>
-            </div>
+                <div className='w-25'> <img className="img-fluid transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125" src={img} alt="" /></div>
+                <div className='bg-gray-200 p-10 w-50'>
+                    <h1 className='text-2xl'>{name}</h1>
+                    <p>Price: <b><i>{price}</i></b></p>
+                    <p>Minimum Order: <b><i>{min_order} Items</i></b></p>
+                    <p>Available Items: <b>{available_quantity}</b></p>
+                    <p> <b>About:  </b><small><i>{short_description}</i></small></p>
+                    <button className="btn my-3 ml-5 text-white" >Confirm Order</button>
+                    {/* {
+                        available_quantity > min_order
+                            ? <button className="btn my-3 ml-5 text-white" >Confirm Order</button>
+                            : <button className="btn my-3 ml-5 text-white" disabled >Confirm Order</button>
 
-        </div>
+
+
+                    } */}
+                    {/* <p className='w-50'>{
+                        available_quantity < min_order
+                            ? <img src={available} alt="" ></img>
+                            : <div ><img src={soldOut} alt="" ></img><p className='text-2xl text-red-500'>Wait For Restock</p></div>
+                    }</p> */}
+                </div>
+            </div >
+
+        </div >
     );
 };
 
