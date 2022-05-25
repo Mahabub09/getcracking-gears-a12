@@ -6,7 +6,7 @@ const AddTools = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/tool`;
+        const url = `https://fierce-scrubland-22388.herokuapp.com/tool`;
         fetch(url, {
             method: 'POST',
             headers: {

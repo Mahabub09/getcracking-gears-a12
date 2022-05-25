@@ -23,7 +23,7 @@ const OrderModal = ({ order, setOrder }) => {
             orderQuantity: event.target.quantity.value,
             address: event.target.address.value
         }
-        axios.post('http://localhost:5000/orders', ordering)
+        axios.post('https://fierce-scrubland-22388.herokuapp.com/orders', ordering)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
