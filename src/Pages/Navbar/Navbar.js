@@ -17,9 +17,11 @@ const Navbar = () => {
         <li><Link to="/myPortfolio">MY PORTFOLIO</Link></li>
         {
             user && <>
-                <li><Link to="/addReview">ADD REVIEW</Link></li>
+
                 <li><Link to="/addTools">ADD TOOLS</Link></li>
-                <li><Link to="/allTools">ALL TOOLS</Link></li></>
+                <li><Link to="/allTools">ALL TOOLS</Link></li>
+                <li><Link to="/dashBoard">DASHBOARD</Link></li>
+            </>
         }
         <li>{user ? <button className="btn mt-1 btn-ghost" onClick={handleSignOut} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
         <img className=' w-[45px] rounded-full mx-auto' src={user?.photoURL} alt="" />
@@ -49,6 +51,13 @@ const Navbar = () => {
                         {navBarItems}
 
                     </ul>
+                </div>
+                <div className="navbar-end">
+                    <label tabIndex="1" htmlFor="dashboard-bar" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+
+
                 </div>
 
             </div>

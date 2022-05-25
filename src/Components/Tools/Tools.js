@@ -56,8 +56,10 @@ const Tools = () => {
         <div className='container'>
 
 
+
             <Bounce top>
                 <div className='grid lg:grid-cols-3 md:grid-cols-1 gap-4'>
+                    <h1 className='text-3xl underline underline-offset-2 text-neutral'> TOOLS</h1>
                     {
                         tools.map(tool => <Tool
                             key={tool._id}

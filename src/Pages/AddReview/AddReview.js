@@ -32,7 +32,7 @@ const AddReview = () => {
                 <h3 className='text-2xl'>{user?.displayName}</h3>
             </div>
             <form className='flex flex-col w-50 mx-auto   space-y-3' onSubmit={handleSubmit(onSubmit)}>
-                <input className='border border-dark p-2 rounded' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                <input className='border border-dark p-2 rounded' placeholder='Name' value={user.displayName} readOnly {...register("name",)} />
                 <input className='border border-dark p-2 rounded' placeholder='LOCATION' {...register("location",)} />
                 <input placeholder='Image URL' className='border border-dark py-2 rounded' value={user?.photoURL} {...register("img")} readOnly />
 

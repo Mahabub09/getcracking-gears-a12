@@ -19,7 +19,7 @@ const MyPortfolio = () => {
                     <p className='flex items-center my-1'><GoLocation></GoLocation>Uttara,Dhaka,Bangladesh</p>
                     <p className='flex items-center my-1'><BsTelephone></BsTelephone>+8801771162711</p>
                     <h1 className='text-xl underline underline-offset-2 text-center'>SOCIAL</h1>
-                    <div class="grid my-3 grid-flow-col gap-4 text-2xl  ">
+                    <div className="grid my-3 grid-flow-col gap-4 text-2xl  ">
                         <a href="https://www.facebook.com/mahabub.remeber.it/"> <Bounce top><BsFacebook className=' hover:text-blue-500 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'></BsFacebook></Bounce></a>
                         <a href="https://twitter.com/TheMahabub"> <Bounce bottom><BsTwitter className='hover:text-blue-500 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'></BsTwitter></Bounce></a>
                         <a href="https://www.linkedin.com/in/mahabub-alam-developer/"><Bounce left><AiFillLinkedin className='hover:text-blue-500 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-125'></AiFillLinkedin></Bounce></a>

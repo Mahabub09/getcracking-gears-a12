@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
@@ -16,28 +17,20 @@ const OrderModal = ({ order, setOrder }) => {
         const ordering = {
             orderId: _id,
             order: name,
-            userEmail: user.email,
-            userName: user.displayName,
+            email: user.email,
+            name: user.displayName,
             phone: event.target.phone.value,
             orderQuantity: event.target.quantity.value,
             address: event.target.address.value
         }
-        fetch('http://localhost:5000/orders', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(ordering)
-        })
-            .then(res => res.json())
-            .then(data => {
+        axios.post('http://localhost:5000/orders', ordering)
+            .then(response => {
+                const { data } = response;
                 if (data.insertedId) {
-                    toast("YOUR ORDER IS CONFIRMED");
-
+                    toast('Your order is Confirmed');
+                    event.target.reset();
                 }
-
-                setOrder(null);
-            });
+            })
 
 
 
