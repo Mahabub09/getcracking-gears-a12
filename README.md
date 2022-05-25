@@ -1,5 +1,5 @@
-# Project Name: GET CRACKING GEARS <br></br>
-[Live Site](https://getcracking-gears.firebaseapp.com/)
+# Project Name: Sinewy Tools <br></br>
+[Live Site](https://sinewy-tools.web.app)
 [heroku Site](https://fierce-scrubland-22388.herokuapp.com/)
  
  <li>Made a beautiful Active Navbar</li>
