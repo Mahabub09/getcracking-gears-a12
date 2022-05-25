@@ -10,6 +10,7 @@ const Navbar = () => {
 
     const handleSignOut = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken')
     }
     const navBarItems = <>
         <li className='p-[-16px]'><Link to="/home">HOME</Link></li>

@@ -18,6 +18,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
 import MyOrders from './Pages/DashBoard/MyOrders';
 import AddReview from './Pages/AddReview/AddReview';
+import AllUsers from './Pages/DashBoard/AllUsers';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="dashboard" element={<RequireAuth><DashBoard /></RequireAuth>} >
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
+          <Route path="allUsers" element={<AllUsers></AllUsers>}></Route>
 
         </Route>
 

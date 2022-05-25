@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../Components/Loading/Loading';
 import auth from '../../firebase.init';
+import useToken from '../../Hooks/useToken';
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
@@ -14,6 +15,14 @@ const SocialLogin = () => {
     let from = location.state?.from?.pathname || "/";
 
     let errorElement;
+    const [token] = useToken(user || user1);
+
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
+
 
     if (loading || loading1) {
         return <Loading></Loading>
@@ -23,7 +32,7 @@ const SocialLogin = () => {
         errorElement = <p className='text-danger'>Error: {error?.message} {error1?.message}</p>
     }
 
-    if (user || user1) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

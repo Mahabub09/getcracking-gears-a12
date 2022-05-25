@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BiRightArrowCircle } from "react-icons/bi";
 import { BiLogInCircle } from "react-icons/bi";
@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../../Components/Loading/Loading';
 import auth from '../../firebase.init';
 import SocialLogin from './SocialLogin';
+import useToken from '../../Hooks/useToken';
 
 const Login = () => {
 
@@ -26,12 +27,18 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user);
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     if (loading || sending) {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
     if (error) {

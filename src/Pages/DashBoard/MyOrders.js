@@ -18,7 +18,34 @@ const MyOrders = () => {
 
     return (
         <div>
-            orders:{orders.length}
+            <h2 className='text-xl text-center text-neutral my-2'> My Orders</h2>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Tool Name</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            orders.map((o, index) => <tr>
+                                <th>{index + 1}</th>
+                                <td>{o.name}</td>
+                                <td>{o.orderQuantity} Items</td>
+                                <td>{o.order}</td>
+                                <td>{o.phone}</td>
+
+                            </tr>)
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

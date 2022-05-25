@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../Components/Loading/Loading';
 import auth from '../../firebase.init';
+import useToken from '../../Hooks/useToken';
 
 import SocialLogin from './SocialLogin';
 
@@ -16,6 +17,7 @@ const Register = () => {
 
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating] = useUpdateProfile(auth);
+    const [token] = useToken(user);
     const navigate = useNavigate();
     const navigateLogin = () => {
         navigate('/login');
@@ -23,7 +25,8 @@ const Register = () => {
     if (loading || updating) {
         return <Loading></Loading>
     }
-    if (user) {
+    if (token) {
+
         navigate('/home');
     }
 
@@ -37,7 +40,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
         console.log('Updated profile');
-        navigate('/home');
+        // navigate('/home');
     }
     return (
         <div className='register-form mt-3 container w-50 mx-auto shadow-lg p-3 my-5 bg-body rounded '>
